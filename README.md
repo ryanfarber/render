@@ -1,4 +1,5 @@
 # render
+[![Version](https://img.shields.io/npm/v/@ryanforever/render.svg)](https://www.npmjs.org/package/@ryanforever/render)
 API wrapper for [Render](https://render.com), the cloud services platform.
 
 This only implements a few native methods corresponding to the API, but there is a `.request()` method you can use to make any other request you'd like.

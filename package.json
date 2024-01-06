@@ -1,0 +1,27 @@
+{
+  "name": "@ryanforever/render",
+  "version": "1.0.0",
+  "description": "render API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm version patch --no-git-tag-version && npm i && git add --all && git commit -m 'auto-build via npm' && git push origin --all && npm publish"
+  },
+  "keywords": [
+    "render",
+    "onrender",
+    "webservices",
+    "api",
+    "cloud"
+  ],
+  "author": "ryan forever",
+  "license": "ISC",
+  "dependencies": {
+    "@ryanforever/logger": "^5.0.4",
+    "axios": "^1.6.5"
+  },
+  "devDependencies": {
+    "dotenv": "^16.3.1"
+  },
+  "files": ["src"]
+}

@@ -8,6 +8,8 @@ class Render {
 	constructor(config = {}) {
 
 		const key = config.key
+		const serviceId = config.serviceId
+
 		if (!key) return logger.error(`missing render API key`)
 		const logger = new Logger(__filename, {debug: config.debug ?? false})
 
@@ -36,6 +38,8 @@ class Render {
 		// perform an action
 		this.action = async function(type, service) {
 			if (!actions.includes(type)) throw new Error(`"${type}" is not a valid render action, must be either [${actions.join("|")}]`)
+				
+			if (serviceId) service = serviceId
 			if (!service) throw new Error(`please input a name or id of a service you want to ${type}`)
 			let match = await this.findService(service)
 			let {id, name} = match

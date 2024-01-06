@@ -10,9 +10,11 @@ Please consult the [Render Docs](https://api-docs.render.com/reference/introduct
 const Render = require("@ryanforever/render")
 const render = new Render({
 	key: process.env.RENDER_KEY
+	serviceId: process.env.RENDER_SERVICE_ID // optionally specifiy a service id to perform all actions on
 })
 
 render.restart("my-web-service")
+render.restart() // if serviceId provided in setup
 ```
 
 

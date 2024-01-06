@@ -6,5 +6,4 @@ const render = new Render({
 	key: process.env.RENDER_KEY
 })
 
-
 render.getServices().then(console.log)

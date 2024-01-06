@@ -6,12 +6,14 @@ const Logger = require("@ryanforever/logger").v2
 
 class Render {
 	constructor(config = {}) {
+		
+		const logger = new Logger(__filename, {debug: config.debug ?? false})
 
 		const key = config.key
 		const serviceId = config.serviceId
 
-		if (!key) return logger.error(`missing render API key`)
-		const logger = new Logger(__filename, {debug: config.debug ?? false})
+		if (!key) throw new Error(`missing render API key`)
+	
 
 		axios.defaults.baseURL = "https://api.render.com/v1"
 		axios.defaults.headers.common.Authorization = `Bearer ${key}`
@@ -57,7 +59,7 @@ class Render {
 		this.get = async function(item, params = {}) {
 			logger.debug(`getting ${item}...`)
 			let res = await axios.get(item).catch(err => {
-				logger.error(err)
+				// logger.error(err)
 				throw new RenderError(err)
 			})
 			let data = res.data

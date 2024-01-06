@@ -1,6 +1,6 @@
 {
   "name": "@ryanforever/render",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "render API",
   "main": "index.js",
   "scripts": {
@@ -23,5 +23,15 @@
   "devDependencies": {
     "dotenv": "^16.3.1"
   },
-  "files": ["src"]
+  "files": [
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryanfarber/render.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ryanfarber/render/issues"
+  },
+  "homepage": "https://github.com/ryanfarber/render#readme"
 }

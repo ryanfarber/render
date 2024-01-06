@@ -1,8 +1,8 @@
 # render
-API wrapper for .
+API wrapper for [Render](https://render.com), the cloud services platform.
 This only implements a few methods corresponding to the api, but there is a `.request()` method you can use to make any other request you'd like.
 
-Please consult the (Render Docs)[https://api-docs.render.com/reference/introduction] for more info.
+Please consult the [Render Docs](https://api-docs.render.com/reference/introduction) for more info.
 
 
 ```javascript
